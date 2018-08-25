@@ -1,5 +1,7 @@
 # UI Elements
 
+[Demo](https://nmacawile.github.io/ui-elements)
+
 ## Carousel
 
 A simple carousel that uses a mix of CSS3 for transitions and vanilla JavaScript for triggering events and creating elements.

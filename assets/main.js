@@ -1,9 +1,24 @@
-const toggleMenu = (function() {
-  const toggle = document.querySelector('.nav-toggle');
-  const topbar = document.querySelector('.topbar');
+const classToggler = (function() {
+  const Toggler = function(toggler) {    
+    const generate = function(customTarget, customClass) {      
+      const target = customTarget || document.querySelector(toggler.dataset.target);
+      const toggleClass = customClass || toggler.dataset.toggleClass;
+      if (target && toggleClass) {        
+        toggler.addEventListener('click', function() {
+          target.classList.toggle(toggleClass);
+        });
+      }
+    };
+    return { generate };
+  };
 
-  toggle.addEventListener('click', function() {
-    topbar.classList.toggle('collapsed');
+  document.querySelectorAll('.nav-toggle').forEach(toggler => {
+    Toggler(toggler).generate();
+  });
+
+  document.querySelectorAll('.dropdown-toggle').forEach(toggler => {
+    const target = toggler.parentElement.querySelector('.nav-dropdown-menu');
+    if (target) Toggler(toggler).generate(target, 'dropdown-collapsed');
   });
 })();
 

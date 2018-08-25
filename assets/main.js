@@ -172,7 +172,8 @@ const simpleCarousel = (function() {
 
     const touchDrag = function(evt) {
       touchFinalX = evt.touches[0].pageX;
-      slider.style.transform = translateX(getSliderOffset()) + ' ' + translateX(touchDifference(), 'px');
+      if (!transitioning)
+        slider.style.transform = translateX(getSliderOffset()) + ' ' + translateX(touchDifference(), 'px');
     };
 
     const touchLift = function() {

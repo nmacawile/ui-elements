@@ -222,7 +222,7 @@ html {
 .carousel-slider {
   display: flex;
   transform: translateX(-100%);
-  transition-duration: .3s;
+  transition-duration: .1s;
   transition-timing-function: linear;
 }
 

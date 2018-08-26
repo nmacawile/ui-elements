@@ -17,8 +17,7 @@ const classToggler = (function() {
   });
 
   document.querySelectorAll('.dropdown-toggle').forEach(toggler => {
-    const target = toggler.parentElement.querySelector('.nav-dropdown-menu');
-    if (target) Toggler(toggler).generate(target, 'dropdown-collapsed');
+    Toggler(toggler).generate(toggler, 'dropdown-collapsed');
   });
 })();
 

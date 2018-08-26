@@ -74,16 +74,24 @@ html {
   transition-duration: .3s;
 }
 
-.dropdown-caret {
+.dropdown-caret-wrapper {
   display: inline-block;
   padding-left: 1rem;
 }
 
-.dropdown-collapsed {
+.dropdown-caret {
+  transition-duration: .3s;
+}
+
+.dropdown-collapsed .dropdown-caret {
+  transform: rotateX(180deg);
+}
+
+.dropdown-collapsed ~ .nav-dropdown-menu {
   max-height: 0;
 }
 
-.nav-dropdown-menu:not(.dropdown-collapsed) {
+.nav-dropdown-menu {
   max-height: 500px;
 }
 
@@ -278,6 +286,11 @@ html {
     margin: 0;
     padding: 0;
     list-style: none;
+  }
+
+  .dropdown-toggle:not(.dropdown-collapsed) {
+    color: #fff;
+    background-color: #6f42c1;
   }
 
   .nav-dropdown-menu {

@@ -231,7 +231,7 @@ html {
   display: flex;
   transform: translateX(-100%);
   transition-duration: .2s;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: linear;
 }
 
 .carousel-slide {

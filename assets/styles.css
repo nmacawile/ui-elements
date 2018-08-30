@@ -230,8 +230,8 @@ html {
 .carousel-slider {
   display: flex;
   transform: translateX(-100%);
-  transition-duration: .2s;
-  transition-timing-function: linear;
+  transition-duration: .3s;
+  transition-timing-function: ease-out;
 }
 
 .carousel-slide {
